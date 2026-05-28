@@ -1,63 +1,102 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Introduction to AI Applications</title>
+<title>AI Applications Course</title>
 
 <style>
 body{
-    font-family: Arial, sans-serif;
-    background:#0f172a;
-    color:white;
     margin:0;
-    padding:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color:white;
 }
 
+/* HEADER */
 header{
-    background:#111827;
-    padding:30px;
     text-align:center;
+    padding:50px 20px;
+    background:#0b1220;
+    border-bottom:2px solid #38bdf8;
 }
 
 header h1{
+    font-size:42px;
     margin:0;
-    font-size:40px;
 }
 
+header p{
+    color:#94a3b8;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:15px;
+    background:#111827;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:8px 15px;
+    border-radius:8px;
+    background:#1e293b;
+}
+
+nav a:hover{
+    background:#38bdf8;
+    color:black;
+}
+
+/* CONTAINER */
 .container{
     width:90%;
-    max-width:1200px;
+    max-width:1100px;
     margin:auto;
     padding:20px;
 }
 
-.lesson{
-    background:#1e293b;
-    margin-bottom:20px;
+/* CARD */
+.card{
+    background:#111827;
     padding:20px;
+    margin-bottom:20px;
     border-radius:12px;
-    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    box-shadow:0 0 15px rgba(0,0,0,0.4);
 }
 
-.lesson h2{
+.card h2{
     color:#38bdf8;
 }
 
-.lesson h3{
+.card h3{
     color:#facc15;
 }
 
-ul{
-    line-height:1.8;
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
 }
 
+.item{
+    background:#1e293b;
+    padding:10px;
+    border-radius:8px;
+}
+
+/* FOOTER */
 footer{
     text-align:center;
     padding:20px;
-    background:#111827;
+    background:#0b1220;
     margin-top:30px;
+    color:#94a3b8;
 }
 </style>
 </head>
@@ -66,161 +105,118 @@ footer{
 
 <header>
     <h1>Introduction to AI Applications</h1>
-    <p>2 Week Beginner Course</p>
+    <p>Beginner Course — Python, AI, Math, Computer Vision, NLP</p>
 </header>
+
+<nav>
+    <a href="#python">Python</a>
+    <a href="#math">Math</a>
+    <a href="#ml">ML</a>
+    <a href="#cv">CV</a>
+    <a href="#nlp">NLP</a>
+    <a href="#libs">Libraries</a>
+</nav>
 
 <div class="container">
 
-<div class="lesson">
-<h2>Lesson 1 — Python Basics for AI</h2>
-
-<h3>Topics</h3>
-<ul>
-<li>Python installation and setup</li>
-<li>Variables and data types</li>
-<li>Lists and dictionaries</li>
-<li>Loops and conditions</li>
-<li>Functions</li>
-<li>NumPy basics</li>
-<li>Matplotlib basics</li>
-<li>VS Code and Jupyter Notebook</li>
-</ul>
+<!-- PYTHON -->
+<div class="card" id="python">
+<h2>Python for AI</h2>
+<div class="grid">
+<div class="item">Variables & Data Types</div>
+<div class="item">Loops & Conditions</div>
+<div class="item">Functions</div>
+<div class="item">Lists & Dictionaries</div>
+<div class="item">File Handling</div>
+<div class="item">Object-Oriented Basics</div>
+</div>
 </div>
 
-<div class="lesson">
-<h2>Lesson 2 — Mathematics for AI</h2>
-
-<h3>Topics</h3>
-<ul>
-<li>Vectors and coordinates</li>
-<li>Functions and graphs</li>
-<li>Linear equations</li>
-<li>Distance calculations</li>
-<li>Mean and variance</li>
-<li>Matrix basics</li>
-<li>Graph plotting</li>
-</ul>
+<!-- MATH -->
+<div class="card" id="math">
+<h2>Mathematics for AI</h2>
+<div class="grid">
+<div class="item">Vectors & Matrices</div>
+<div class="item">Linear Equations</div>
+<div class="item">Probability</div>
+<div class="item">Statistics</div>
+<div class="item">Distance Functions</div>
+<div class="item">Graph Theory Basics</div>
+</div>
 </div>
 
-<div class="lesson">
-<h2>Lesson 3 — Machine Learning</h2>
-
-<h3>Topics</h3>
-<ul>
-<li>Supervised learning</li>
-<li>Unsupervised learning</li>
-<li>Classification</li>
-<li>Regression</li>
-<li>Training and testing</li>
-<li>Scikit-learn basics</li>
-</ul>
+<!-- ML -->
+<div class="card" id="ml">
+<h2>Machine Learning</h2>
+<div class="grid">
+<div class="item">Supervised Learning</div>
+<div class="item">Unsupervised Learning</div>
+<div class="item">Classification</div>
+<div class="item">Regression</div>
+<div class="item">Model Training</div>
+<div class="item">Evaluation Metrics</div>
+</div>
 </div>
 
-<div class="lesson">
-<h2>Lesson 4 — OpenCV and Computer Vision</h2>
-
-<h3>Topics</h3>
-<ul>
-<li>OpenCV installation</li>
-<li>Image processing</li>
-<li>Color spaces</li>
-<li>Edge detection</li>
-<li>Object detection</li>
-<li>Face detection</li>
-<li>Real-time webcam processing</li>
-</ul>
+<!-- COMPUTER VISION -->
+<div class="card" id="cv">
+<h2>Computer Vision (OpenCV)</h2>
+<div class="grid">
+<div class="item">Image Processing</div>
+<div class="item">Face Detection</div>
+<div class="item">Edge Detection</div>
+<div class="item">Object Tracking</div>
+<div class="item">Video Analysis</div>
+<div class="item">Real-time Camera AI</div>
+</div>
 </div>
 
-<div class="lesson">
-<h2>Lesson 5 — Neural Networks</h2>
-
-<h3>Topics</h3>
-<ul>
-<li>Artificial neurons</li>
-<li>Activation functions</li>
-<li>Neural network layers</li>
-<li>Deep learning overview</li>
-<li>CNN introduction</li>
-<li>TensorFlow and PyTorch</li>
-</ul>
+<!-- NLP -->
+<div class="card" id="nlp">
+<h2>Natural Language Processing</h2>
+<div class="grid">
+<div class="item">Text Preprocessing</div>
+<div class="item">Sentiment Analysis</div>
+<div class="item">Chatbots</div>
+<div class="item">Tokenization</div>
+<div class="item">Language Models</div>
+<div class="item">Text Generation</div>
+</div>
 </div>
 
-<div class="lesson">
-<h2>Lesson 6 — Data Analysis</h2>
-
-<h3>Topics</h3>
-<ul>
-<li>Pandas basics</li>
-<li>CSV datasets</li>
-<li>Data cleaning</li>
-<li>Statistics</li>
-<li>Data visualization</li>
-<li>Correlation analysis</li>
-</ul>
+<!-- LIBRARIES -->
+<div class="card" id="libs">
+<h2>AI Libraries & Tools</h2>
+<div class="grid">
+<div class="item">NumPy — numerical computing</div>
+<div class="item">Pandas — data analysis</div>
+<div class="item">Matplotlib — visualization</div>
+<div class="item">Scikit-learn — ML models</div>
+<div class="item">OpenCV — computer vision</div>
+<div class="item">TensorFlow — deep learning</div>
+<div class="item">PyTorch — neural networks</div>
+<div class="item">spaCy — NLP</div>
+</div>
 </div>
 
-<div class="lesson">
-<h2>Lesson 7 — Natural Language Processing</h2>
-
-<h3>Topics</h3>
-<ul>
-<li>Text preprocessing</li>
-<li>Sentiment analysis</li>
-<li>Chatbots</li>
-<li>Transformers</li>
-<li>Speech recognition</li>
-<li>spaCy and NLTK</li>
-</ul>
+<!-- FUNCTIONS -->
+<div class="card">
+<h2>Important AI Functions</h2>
+<div class="grid">
+<div class="item">Activation Functions (ReLU, Sigmoid)</div>
+<div class="item">Loss Functions (MSE, Cross-Entropy)</div>
+<div class="item">Gradient Descent</div>
+<div class="item">Softmax Function</div>
+<div class="item">Feature Scaling</div>
+<div class="item">Normalization</div>
 </div>
-
-<div class="lesson">
-<h2>Lesson 8 — Robotics and AI Systems</h2>
-
-<h3>Topics</h3>
-<ul>
-<li>Robotics basics</li>
-<li>Raspberry Pi</li>
-<li>Sensors and actuators</li>
-<li>Navigation systems</li>
-<li>Obstacle detection</li>
-<li>Autonomous systems</li>
-</ul>
-</div>
-
-<div class="lesson">
-<h2>Lesson 9 — Practical AI Development</h2>
-
-<h3>Topics</h3>
-<ul>
-<li>Dataset preparation</li>
-<li>Model training</li>
-<li>Image classifiers</li>
-<li>Recommendation systems</li>
-<li>Google Colab</li>
-<li>AI deployment basics</li>
-</ul>
-</div>
-
-<div class="lesson">
-<h2>Lesson 10 — Future of AI</h2>
-
-<h3>Topics</h3>
-<ul>
-<li>AI careers</li>
-<li>AGI concepts</li>
-<li>Autonomous vehicles</li>
-<li>Ethical AI</li>
-<li>Research directions</li>
-<li>Final project presentation</li>
-</ul>
 </div>
 
 </div>
 
 <footer>
-    Introduction to AI Applications Course
+AI Applications Course — Built for Beginners
 </footer>
 
 </body>
 </html>
-```
